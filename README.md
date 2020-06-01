@@ -7,7 +7,7 @@
 > 今天开始保持每天在github 上写一点自己的东西，来记录一下匆匆的水月。细数一下 做java 也有两个年头，经历一番沉淀，决定再次开始写一点东西回顾个人的往事沉浮。
 
 #### java基础篇记录
-[java1.8 日期函数](./src/main/java/com/study/jdk/studydate/StudyLocaldate.java)
+[java1.8 日期函数](./jdk8study/src/main/java/com/study/jdk/studydate/StudyLocaldate.java)
 
 #### spring系列
 
