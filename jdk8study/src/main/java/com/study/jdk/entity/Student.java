@@ -1,4 +1,6 @@
-package com.study.jdk.test.entity;
+package com.study.jdk.entity;
+
+import lombok.Data;
 
 import java.io.Serializable;
 
