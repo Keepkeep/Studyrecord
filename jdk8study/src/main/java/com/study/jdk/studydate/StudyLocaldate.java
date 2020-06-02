@@ -8,6 +8,8 @@ import java.time.temporal.TemporalAccessor;
 
 public class StudyLocaldate {
     public static void main(String[] args) {
+        //Java8里面新出来了一些API，LocalDate、LocalTime、LocalDateTime 非常好用 注意使用的时候确认下数据库驱动的版本否则会报错误
+        //产考博客：https://blog.csdn.net/qq_40006446/article/details/80535359
         //jdk 1.8 时间日期函数API
         //只有时间的函数 localdate 构造函数为私有的所以不能使用构造函数获取
         LocalDate localDate = LocalDate.now();
@@ -20,6 +22,13 @@ public class StudyLocaldate {
         LocalDateTime now = LocalDateTime.now();
         //输出2020-06-01T23:53:51.392
         System.out.println(now);
+
+        //底层LocalDateTime of(int year, int month, int dayOfMonth, int hour, int minute)的实现
+        //  LocalDate date = LocalDate.of(year, month, dayOfMonth);
+        //  LocalTime time = LocalTime.of(hour, minute);
+        //  return new LocalDateTime(date, time);
+        //  由上可以发现LocalDateTime通过localdate 和localTime 构建成的
+
 
         //时间格式化
         // 格式化日期 --- > 字符串
@@ -38,6 +47,8 @@ public class StudyLocaldate {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
         String format = dateTimeFormatter.format(LocalDateTime.now());
         System.out.println("自定义格式"+format);
+
+        //
 
 
     }
