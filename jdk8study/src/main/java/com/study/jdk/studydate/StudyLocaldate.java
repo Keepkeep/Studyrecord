@@ -1,10 +1,10 @@
 package com.study.jdk.studydate;
 
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
+import java.util.Date;
 
 public class StudyLocaldate {
     public static void main(String[] args) {
@@ -48,8 +48,54 @@ public class StudyLocaldate {
         String format = dateTimeFormatter.format(LocalDateTime.now());
         System.out.println("自定义格式"+format);
 
-        //
+        //时间比较
+        LocalDateTime now2 = LocalDateTime.now();
+        LocalDateTime befornow = LocalDateTime.of(2018, 9, 01, 8, 36);
+        boolean before = befornow.isBefore(now);
+        System.out.println("之前时间"+before);
+
+        //获取LocalDateTime年月日
+        LocalDateTime now3 = LocalDateTime.now();
+        System.out.println("获取年"+now3.getYear()+"获取月份"+now3.getDayOfMonth()+"获取时间"+now3.getHour()+"获取分"+now3.getMinute()+"获取秒"+now3.getSecond());;
+
+        //时间操作减时间
+        //去年该时刻
+        LocalDateTime localDateTime = now3.minusYears(1);
+        // 减去一个月
+        LocalDateTime localDateTime1 = now3.minusMonths(1);
+        //上周时间
+        LocalDateTime localDateTime2 = now3.minusWeeks(1);
+        System.out.println(localDateTime);
+
+        // 时间加的操作
+        LocalDateTime now4 = LocalDateTime.now();
+        LocalDateTime localDateTime3 = now4.plusYears(1);
+        LocalDateTime localDateTime4 = now4.plusMonths(1);
+        System.out.println( localDateTime3);
+
+        //计算时间差
+        LocalDateTime now5 = LocalDateTime.now();
+        LocalDateTime now6 = LocalDateTime.of(2019,6,2,10,26,12);
+        Duration between = Duration.between(now6, now5);
+
+        System.out.println("相隔多少天："+between.toDays()+"相隔多少个小时"+between.toHours());
+
+        //通过时间戳
+        LocalDateTime localDateTime5 = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
+        System.out.printf("获取的时间%s\n",DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss").format(localDateTime5));
 
 
     }
+
+    //将java.util.Date 转换为java8 的java.time.LocalDateTime,默认时区为东8区
+    public static LocalDateTime dateConvertToLocalDateTime(Date date) {
+        return date.toInstant().atOffset(ZoneOffset.of("+8")).toLocalDateTime();
+    }
+
+
+    //将java8 的 java.time.LocalDateTime 转换为 java.util.Date，默认时区为东8区
+    public static Date localDateTimeConvertToDate(LocalDateTime localDateTime) {
+        return Date.from(localDateTime.toInstant(ZoneOffset.of("+8")));
+    }
+
 }
