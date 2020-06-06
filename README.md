@@ -24,7 +24,8 @@
 ####  数据库列
 
 ####  多线程
-[2020年Java多线程与并发系列](https://juejin.im/post/5e8ee367518825736d279551)
+
+[多线程学习](./jdk8study/src/main/resources/doc/Thread.md)
 
 
 #### 运维系列
