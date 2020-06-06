@@ -1,6 +1,4 @@
-package com.study.jdk.studysychironized.threed;
-
-import java.lang.reflect.Method;
+package com.study.jdk.studysychronized.threed;
 
 /**
  * 创建线程常见的三种方式

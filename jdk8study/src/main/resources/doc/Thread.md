@@ -26,6 +26,8 @@
 
 ![线程状态图](../images/Thread/ThreaStatus.png)
 
+![](/Recordstudy/jdk8study/src/main/resources/images/Thread/ThreaStatus.png)
+
 
 
 #### 产考文档

@@ -1,4 +1,4 @@
-package com.study.jdk.studysychironized.threed;
+package com.study.jdk.studysychronized.threed;
 
 import java.util.concurrent.TimeUnit;
 
