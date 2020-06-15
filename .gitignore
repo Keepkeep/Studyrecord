@@ -8,3 +8,5 @@
 target/
 out
 gen
+
+jdk8study/target/**

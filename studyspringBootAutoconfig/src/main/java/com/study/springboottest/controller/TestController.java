@@ -1,4 +1,4 @@
-package con.study.springboottest.controller;
+package com.study.springboottest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

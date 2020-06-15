@@ -1,4 +1,4 @@
-package con.study.springboottest.config;
+package com.study.springboottest.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;

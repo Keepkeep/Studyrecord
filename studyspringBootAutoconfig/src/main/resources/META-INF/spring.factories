@@ -1,3 +1,3 @@
 # Run Listeners
 org.springframework.boot.SpringApplicationRunListener=\
-con.study.springboottest.config.MyspringApplicationRunListener
+com.study.springboottest.config.MyspringApplicationRunListener

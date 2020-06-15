@@ -1,8 +1,7 @@
-package con.study.springboottest;
+package com.study.springboottest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import sun.applet.Main;
 
 @SpringBootApplication
 public class App {
