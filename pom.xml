@@ -12,6 +12,7 @@
         <module>jdk8study</module>
         <module>studyspringboot</module>
         <module>studyspringBootAutoconfig</module>
+        <module>studyspringbootsecurity</module>
     </modules>
     <dependencyManagement>
         <dependencies>
