@@ -10,6 +10,11 @@ import org.springframework.context.annotation.Configuration;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * shiro 的配置
+ *
+ */
+
 @Configuration
 public class ShiroConfig {
 
@@ -30,6 +35,7 @@ public class ShiroConfig {
        return secumanager;
     }
 
+    @Bean
     public ShiroFilterFactoryBean shiroFilterFactoryBean() {
         // <1> 创建 ShiroFilterFactoryBean 对象，用于创建 ShiroFilter 过滤器
         ShiroFilterFactoryBean filterFactoryBean = new ShiroFilterFactoryBean();
